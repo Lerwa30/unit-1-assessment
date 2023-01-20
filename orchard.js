@@ -236,11 +236,15 @@ console.log(pinkPounds)
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
 
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
+// multiplied the price and the pounds to find total profit
 
 
 
