@@ -259,4 +259,7 @@ console.log(pinkProfit)
     Log `totalProfit` to the console.
 */
 
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+console.log(totalProfit);
+//added all profit variables together
 // CODE HERE
