@@ -49,8 +49,22 @@ const pinkPrice = .55
     Log `totalAcres` to the console.
 */
 
+let totalAcres = 0
+for(let i = 0; i < fujiAcres.length; i++){
+    totalAcres += fujiAcres[i];
+   }
+// created a for loop to loop through fuji then added each element together using '+=' and assigned it to total   
+for(let i = 0; i < galaAcres.length; i++){
+    totalAcres += galaAcres[i];
+} 
+// same steps as the first for loop but now totalAcres is 15 plus the elements of galaAcres  
+for(let i = 0; i < pinkAcres.length; i++){
+    totalAcres += pinkAcres[i];
+}
+// again same thing here totalAcres is 41 after the second loop now we had each element in pinkAcres to the total and get 63
+console.log(totalAcres);
+    
 // CODE HERE
-
 
 
 
@@ -67,6 +81,9 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
+let averageDailyAcres = totalAcres / (7 * 3);
+console.log(averageDailyAcres);
+//divided totalAcres by number of days in a week multiplied by 3 weeks gets an average of 3 per day
 // CODE HERE
 
 
@@ -105,6 +122,12 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
+while (acresLeft > 0) {
+    days++;
+    acresLeft -= averageDailyAcres
+}
+console.log(days);
+
 // CODE HERE
 
 
@@ -135,14 +158,26 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+ let fujiTons = []
+ let galaTons = []
+ let pinkTons = []
 
+ for(let i = 0; i < fujiAcres.length; i++){
+    fujiTons.push(fujiAcres[i] * 6.5);
+ }
+ console.log(fujiTons);
 
+for(let i = 0; i < galaAcres.length; i++){
+    galaTons.push(galaAcres[i] * 6.5);
+}
+console.log(galaTons)
 
+for(let i = 0; i < pinkAcres.length; i++){
+    pinkTons.push(pinkAcres[i] * 6.5);
+}
+console.log(pinkTons)
 
-
+// looped through the original array then pushed each element multiplied by 6.5 to the new array
 
 // PROBLEM 5
 
@@ -162,14 +197,26 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
+for(let i = 0; i < fujiTons.length; i++){
+    fujiPounds += fujiTons[i] * 2000;
+}
+console.log(fujiPounds)
 
+for(let i = 0; i < galaTons.length; i++){
+    galaPounds += galaTons[i] * 2000;
+}
+console.log(galaPounds)
 
+for(let i = 0; i < pinkTons.length; i++){
+    pinkPounds += pinkTons[i] * 2000;
+}
+console.log(pinkPounds)
 
-
+//looped through each ton array and added each element multiplied by 2000 together to get total pounds
 
 // PROBLEM 6
 
